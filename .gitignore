@@ -1,0 +1,8 @@
+*.vsix
+out
+dist
+node_modules
+.vscode/*
+.vscode-test/
+!.vscode/launch.json
+!.vscode/tasks.json
