@@ -107,6 +107,13 @@ suite('Syntax validator for diagnostic', () => {
 		assert.deepStrictEqual(offense.range, range);
 		assert.deepStrictEqual(offense.severity, DiagnosticSeverity.Error);
 	});
+
+	test(`return no offenses for valid action with number`, async () => {
+		const text = `<div data-controller="c-dummy" data-target="c-dummy.t_dummy" data-action="c-dummy#m2_dummy">`;
+		const offenses = await validateContent(text);
+
+		assert.deepStrictEqual(offenses, []);
+	});
 });
 
 suite('Ruby method syntax validator sanity check', () => {

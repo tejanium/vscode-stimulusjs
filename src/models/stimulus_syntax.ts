@@ -1,4 +1,4 @@
-export const SYNTAX_REGEXP = /(controller|target|action)\s*[:=]\s*["']([a-zA-Z_\-\.>#:@ ]*)["']?/;
+export const SYNTAX_REGEXP = /(controller|target|action)\s*[:=]\s*["']([a-zA-Z0-9_\-\.>#:@ ]*)["']?/;
 
 export const EVENT_SEPARATOR = '->';
 export const ACTION_SEPARATOR = '#';

@@ -1,5 +1,5 @@
 import assert = require('assert');
-import { definitionItems, DUMMY_CONTROLLER, DUMMY_CONTROLLER_RANGE, DUMMY_TARGET_RANGE, DUMMY_ACTION_RANGE, DUMMY_SUBDIR_CONTROLLER } from '../helper';
+import { definitionItems, DUMMY_CONTROLLER, DUMMY_CONTROLLER_RANGE, DUMMY_TARGET_RANGE, DUMMY_ACTION_RANGE, DUMMY_SUBDIR_CONTROLLER, DUMMY2_ACTION_RANGE } from '../helper';
 
 suite('HTML attribute definition provider', () => {
 	test(`locate controller`, async () => {
@@ -108,6 +108,14 @@ suite('HTML attribute definition provider', () => {
 
 		assert.deepStrictEqual(location?.uri.fsPath, DUMMY_CONTROLLER);
 		assert.deepStrictEqual(location?.range, DUMMY_CONTROLLER_RANGE);
+	});
+
+	test(`locate action with number`, async () => {
+		const text = `<div data-controller="c-dummy" data-target="c-dummy.t_dummy" data-action="click->c-dummy#m2_du|mmy">`;
+		const location = await definitionItems(text);
+
+		assert.deepStrictEqual(location?.uri.fsPath, DUMMY_CONTROLLER);
+		assert.deepStrictEqual(location?.range, DUMMY2_ACTION_RANGE);
 	});
 });
 

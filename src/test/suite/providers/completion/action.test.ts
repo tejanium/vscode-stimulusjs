@@ -90,7 +90,7 @@ suite('HTML attribute completion action', () => {
 		const text = `<div data-action="c-dummy#|`;
 		const items = await completionItems(text);
 
-		assert.deepStrictEqual(items, ['m_dummy']);
+		assert.deepStrictEqual(items, ['m_dummy', 'm2_dummy']);
 	});
 
 	test(`after controller and .`, async () => {
@@ -111,21 +111,21 @@ suite('HTML attribute completion action', () => {
 		const text = `<div data-action="c-dummy#m_du|mmy`;
 		const items = await completionItems(text);
 
-		assert.deepStrictEqual(items, ['m_dummy']);
+		assert.deepStrictEqual(items, ['m_dummy', 'm2_dummy']);
 	});
 
 	test(`after incomplete word`, async () => {
 		const text = `<div data-action="c-dummy#m_du|`;
 		const items = await completionItems(text);
 
-		assert.deepStrictEqual(items, ['m_dummy']);
+		assert.deepStrictEqual(items, ['m_dummy', 'm2_dummy']);
 	});
 
 	test(`after word`, async () => {
 		const text = `<div data-action="c-dummy#m_dummy|`;
 		const items = await completionItems(text);
 
-		assert.deepStrictEqual(items, ['m_dummy']);
+		assert.deepStrictEqual(items, ['m_dummy', 'm2_dummy']);
 	});
 
 	test(`after event suggest controller`, async () => {
@@ -153,21 +153,21 @@ suite('HTML attribute completion action', () => {
 		const text = `<div data-action="click->c-dummy#|`;
 		const items = await completionItems(text);
 
-		assert.deepStrictEqual(items, ['m_dummy']);
+		assert.deepStrictEqual(items, ['m_dummy', 'm2_dummy']);
 	});
 
 	test(`after # after event:type suggest action`, async () => {
 		const text = `<div data-action="ajax:success->c-dummy#|`;
 		const items = await completionItems(text);
 
-		assert.deepStrictEqual(items, ['m_dummy']);
+		assert.deepStrictEqual(items, ['m_dummy', 'm2_dummy']);
 	});
 
 	test (`multiple actions`, async () => {
 		const text = `<div data-action="subdir--c-subdummy#m_subdummy c-dummy#|`;
 		const items = await completionItems(text);
 
-		assert.deepStrictEqual(items, ['m_dummy']);
+		assert.deepStrictEqual(items, ['m_dummy', 'm2_dummy']);
 	});
 
 	test(`with @ in action`, async () => {

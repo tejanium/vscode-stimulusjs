@@ -13,14 +13,14 @@ suite('HTML attribute completion smoke', () => {
 		const text = `<div data-controller="c-dummy" data-action="c-dummy#|`;
 		const items = await completionItems(text);
 
-		assert.deepStrictEqual(items, ['m_dummy']);
+		assert.deepStrictEqual(items, ['m_dummy', 'm2_dummy']);
   });
 
   test(`after # with presence of controller`, async () => {
 		const text = `<div data-controller="c-dummy" data-target="c-dummy.t_dummy" data-action="c-dummy#|`;
 		const items = await completionItems(text);
 
-		assert.deepStrictEqual(items, ['m_dummy']);
+		assert.deepStrictEqual(items, ['m_dummy', 'm2_dummy']);
 	});
 
 	test(`outside value`, async () => {
@@ -43,14 +43,14 @@ suite('Ruby method completion provider sanity check', () => {
 		const text = `<%= foo data: { controller: "c-dummy", action: "c-dummy#|`;
 		const items = await completionItems(text);
 
-		assert.deepStrictEqual(items, ['m_dummy']);
+		assert.deepStrictEqual(items, ['m_dummy', 'm2_dummy']);
   });
 
   test(`after # with presence of controller`, async () => {
 		const text = `<%= foo data: { controller: "c-dummy", target: "c-dummy.t_dummy", action: "c-dummy#|`;
 		const items = await completionItems(text);
 
-		assert.deepStrictEqual(items, ['m_dummy']);
+		assert.deepStrictEqual(items, ['m_dummy', 'm2_dummy']);
 	});
 
 	test(`outside value`, async () => {

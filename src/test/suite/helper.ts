@@ -13,6 +13,7 @@ export const DUMMY_SUBDIR_CONTROLLER = path.resolve(FIXTURE_PATH, 'subdir/c_subd
 export const DUMMY_CONTROLLER_RANGE = new Range(new Position(0, 0), new Position(0, 0));
 export const DUMMY_TARGET_RANGE = new Range(new Position(1, 20), new Position(1, 29));
 export const DUMMY_ACTION_RANGE = new Range(new Position(3, 2), new Position(3, 15));
+export const DUMMY2_ACTION_RANGE = new Range(new Position(4, 2), new Position(4, 16));
 export const EVENT_SUGGESTIONS = Object.keys(EVENTS);
 
 function textAndCursorOffset(input: string): {text: string, offset: number} {
