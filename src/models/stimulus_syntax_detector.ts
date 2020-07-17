@@ -2,8 +2,8 @@ import { TextDocument, Position } from 'vscode';
 import { CursorScanner } from './cursor_scanner';
 import { StimulusSyntax, SYNTAX_REGEXP, ACTION_SEPARATOR, TARGET_SEPARATOR, EVENT_SEPARATOR } from './stimulus_syntax';
 
-const WORD_REGEXP = /[a-zA-Z_\-]+/;
-const VALUE_REGEXP = /[a-zA-Z_\-\.>#:]+/;
+const WORD_REGEXP = /[a-zA-Z_\-@]+/;
+const VALUE_REGEXP = /[a-zA-Z_\-\.>#:@]+/;
 
 export class StimulusSyntaxDetector {
 	readonly controller: string | undefined;

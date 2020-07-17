@@ -169,4 +169,11 @@ suite('HTML attribute completion action', () => {
 
 		assert.deepStrictEqual(items, ['m_dummy']);
 	});
+
+	test(`with @ in action`, async () => {
+		const text = `<div data-action="click@document->c-dum|my`;
+		const items = await completionItems(text);
+
+		assert.deepStrictEqual(items, ['c-dummy', 'subdir--c-subdummy']);
+	});
 });
