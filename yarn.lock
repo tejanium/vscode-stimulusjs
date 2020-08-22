@@ -281,45 +281,57 @@ acorn-bfs@^0.2.0:
   resolved "https://registry.yarnpkg.com/acorn-bfs/-/acorn-bfs-0.2.0.tgz#20dcf9f78fb3eb54924febedb208c3aeece3f732"
   integrity sha1-INz594+z61SST+vtsgjDruzj9zI=
 
-acorn-class-fields@^0.3.7:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/acorn-class-fields/-/acorn-class-fields-0.3.7.tgz#a35122f3cc6ad2bb33b1857e79215677fcfdd720"
-  integrity sha512-jdUWSFce0fuADUljmExz4TWpPkxmRW/ZCPRqeeUzbGf0vFUcpQYbyq52l75qGd0oSwwtAepeL6hgb/naRgvcKQ==
+acorn-class-fields@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/acorn-class-fields/-/acorn-class-fields-0.3.6.tgz#e45916dcd95c3d7faad1c811e3abd818defe14d9"
+  integrity sha512-nOzMl1byCFAJLgxNUG7QorpzRHWlkBKVSSOMKUu+bVbVZG5lU4NZkOp/uA7CnE+NAsWhmxTsMgQdHsQXUO8Ulg==
   dependencies:
-    acorn-private-class-elements "^0.2.7"
+    acorn-private-class-elements "^0.2.6"
 
 acorn-jsx@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.2.0.tgz#4c66069173d6fdd68ed85239fc256226182b2ebe"
   integrity sha512-HiUX/+K2YpkpJ+SzBffkM/AQ2YE03S0U1kjTLVpoJdhZMOWy8qvXVN9JdLqv2QsaQ6MPYQIuNmwD8zOiYUofLQ==
 
-acorn-private-class-elements@^0.2.7:
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/acorn-private-class-elements/-/acorn-private-class-elements-0.2.7.tgz#b14902c705bcff267adede1c9f61c1a317ef95d2"
-  integrity sha512-+GZH2wOKNZOBI4OOPmzpo4cs6mW297sn6fgIk1dUI08jGjhAaEwvC39mN2gJAg2lmAQJ1rBkFqKWonL3Zz6PVA==
+acorn-logical-assignment@^0.1.1:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/acorn-logical-assignment/-/acorn-logical-assignment-0.1.3.tgz#4c81ec136994e4b505e2de42636c923722e88377"
+  integrity sha512-tLFK3+HWerA2rAJaY02LRtDeO0/nwgw6Wn1EZwO8cNZRbZiwBxKo4V5rJEoVSfBvEqXo44JaiA2Q9ycYx+y7qQ==
 
-acorn-private-methods@^0.3.3:
+acorn-numeric-separator@^0.3.2:
   version "0.3.3"
-  resolved "https://registry.yarnpkg.com/acorn-private-methods/-/acorn-private-methods-0.3.3.tgz#724414ce5b2fec733089d73a5cbba8f7beff75b1"
-  integrity sha512-46oeEol3YFvLSah5m9hGMlNpxDBCEkdceJgf01AjqKYTK9r6HexKs2rgSbLK81pYjZZMonhftuUReGMlbbv05w==
-  dependencies:
-    acorn-private-class-elements "^0.2.7"
+  resolved "https://registry.yarnpkg.com/acorn-numeric-separator/-/acorn-numeric-separator-0.3.3.tgz#1002e3c3e68540449131370b81078b3fc36a4b18"
+  integrity sha512-xMbqqXR9EnxuGN1N6CbU+sm/sKS+VSttTnU6aRf9klvZF/P5E5BMtR3xZfSFWbVIkd4uXGKfgZJZwZ73zpExXQ==
 
-acorn-stage3@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/acorn-stage3/-/acorn-stage3-4.0.0.tgz#e8b98ae2a9991be0ba1745b5b626211086b435a8"
-  integrity sha512-BR+LaADtA6GTB5prkNqWmlmCLYmkyW0whvSxdHhbupTaro2qBJ95fJDEiRLPUmiACGHPaYyeH9xmNJWdGfXRQw==
-  dependencies:
-    acorn-class-fields "^0.3.7"
-    acorn-private-methods "^0.3.3"
-    acorn-static-class-features "^0.2.4"
+acorn-private-class-elements@^0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/acorn-private-class-elements/-/acorn-private-class-elements-0.2.6.tgz#625155cbf4d42ce1f8063db8c9b88adfdd8db2c5"
+  integrity sha512-PV+AhOU1/vCx5zIBgGYLB5+OoT8IPKZUcWEGdLBTQgFBMMzPM9S5SKSG4EdiuULqoq3pV3C07rGuSC1Y5gbi/g==
 
-acorn-static-class-features@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/acorn-static-class-features/-/acorn-static-class-features-0.2.4.tgz#a0f5261dd483f25196716854f2d7652a1deb39ee"
-  integrity sha512-5X4mpYq5J3pdndLmIB0+WtFd/mKWnNYpuTlTzj32wUu/PMmEGOiayQ5UrqgwdBNiaZBtDDh5kddpP7Yg2QaQYA==
+acorn-private-methods@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/acorn-private-methods/-/acorn-private-methods-0.3.2.tgz#4a0b311607444157efc3180210d3a909673f6469"
+  integrity sha512-jTgRNDbEkbtxOIPUmDZ4u4oDGCO4tNPDNeW+jJrkbLl/Hzl9EVLva+kGQ289irSPhxi7FI9TjuXmIiqjnJcj9w==
   dependencies:
-    acorn-private-class-elements "^0.2.7"
+    acorn-private-class-elements "^0.2.6"
+
+acorn-stage3@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/acorn-stage3/-/acorn-stage3-3.0.0.tgz#4d80b3e4dbe5c27ef888fb4e8fdab3ecf7218bdb"
+  integrity sha512-zS8peaLCVRDxj8kUpJTazea65Ob8wCNb+rSMTj7o0XohrA529YlUESvnTirz2iMX0157Mu2jPHaQB32+Sr79xQ==
+  dependencies:
+    acorn-class-fields "^0.3.6"
+    acorn-logical-assignment "^0.1.1"
+    acorn-numeric-separator "^0.3.2"
+    acorn-private-methods "^0.3.2"
+    acorn-static-class-features "^0.2.3"
+
+acorn-static-class-features@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/acorn-static-class-features/-/acorn-static-class-features-0.2.3.tgz#c59e17c81afa28d6fc140d2ab1429e3eaea5dd66"
+  integrity sha512-N7yRI9NduTJRam3BQTXHLR63ykHQv2MnxWTRq0+4PfQosGUz/tM0/ToRqWUqGphP960mDTm/7zJFx3dB/AZtiw==
+  dependencies:
+    acorn-private-class-elements "^0.2.6"
 
 acorn@^6.4.1:
   version "6.4.1"

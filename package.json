@@ -57,6 +57,6 @@
 	"dependencies": {
 		"acorn": "^7.4.0",
 		"acorn-bfs": "^0.2.0",
-		"acorn-stage3": "^4.0.0"
+		"acorn-stage3": "^3.0.0"
 	}
 }
