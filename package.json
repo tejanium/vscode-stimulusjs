@@ -15,7 +15,7 @@
 		"url": "https://github.com/tejanium/vscode-stimulusjs"
 	},
 	"engines": {
-		"vscode": "^1.47.0"
+		"vscode": "^1.48.0"
 	},
 	"categories": [
 		"Other"
