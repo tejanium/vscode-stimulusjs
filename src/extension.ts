@@ -1,4 +1,4 @@
-import { ExtensionContext, languages, workspace, DiagnosticCollection, window, TextDocument } from 'vscode';
+import { ExtensionContext, languages, workspace, DiagnosticCollection, window, TextDocument, Uri } from 'vscode';
 import { Stimulus, STIMULUS_CONTROLLER_GLOB } from './models/stimulus';
 import StimulusDefinitionProvider from './providers/definition';
 import StimulusCompletionProvider from './providers/completion';
@@ -19,11 +19,27 @@ export async function activate(context: ExtensionContext) {
 		workspace.onDidChangeTextDocument(event => diagnose(event.document, diagnosticCollection, stimulus))
 	);
 
-	watcher.onDidChange(uri => stimulus.updateIndexByUri(uri));
+	const runDiagnostic = () => {
+		if (window.activeTextEditor) {
+			diagnose(window.activeTextEditor.document, diagnosticCollection, stimulus);
+		}
+	};
 
-	if (window.activeTextEditor) {
-		diagnose(window.activeTextEditor.document, diagnosticCollection, stimulus);
-	}
+	const updateAndRunDiagnostic = async (uri: Uri) => {
+		await stimulus.updateIndexByUri(uri);
+
+		runDiagnostic();
+	};
+
+	watcher.onDidChange(updateAndRunDiagnostic);
+	watcher.onDidCreate(updateAndRunDiagnostic);
+	watcher.onDidDelete(async uri => {
+		await stimulus.removeIndexByUri(uri);
+
+		runDiagnostic();
+	});
+
+	runDiagnostic();
 }
 
 export function deactivate() { }

@@ -42,6 +42,18 @@ export class StimulusController {
 		return new StimulusController(uri, content.toString());
 	}
 
+	static parseFileName(uri: Uri): string {
+		const name = basename(uri.fsPath);
+		const paths = dirname(uri.fsPath).split(sep);
+		const stimulusName = paths.slice(paths.indexOf('controllers') + 1, paths.length).concat([name]);
+
+		return stimulusName.join('--');
+	}
+
+	static parseName(fileName: string): string {
+		return fileName.replace('_controller.js', '').replace(/_/g, '-');;
+	}
+
 	get targetNames(): string[] {
 		return Object.keys(this.targetLocations);
 	}
@@ -59,15 +71,11 @@ export class StimulusController {
 	}
 
 	get fileName(): string{
-		const name = basename(this.uri.fsPath);
-		const paths = dirname(this.uri.fsPath).split(sep);
-		const stimulusName = paths.slice(paths.indexOf('controllers') + 1, paths.length).concat([name]);
-
-		return stimulusName.join('--');
+		return StimulusController.parseFileName(this.uri);
 	}
 
 	get name(): string {
-		return this.fileName.replace('_controller.js', '').replace(/_/g, '-');
+		return StimulusController.parseName(this.fileName);
 	}
 
 	private calculateLocation(node: JsNode): Location | undefined {

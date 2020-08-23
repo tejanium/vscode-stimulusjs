@@ -28,6 +28,13 @@ export class Stimulus {
 		this.updateIndex(await StimulusController.parse(uri));
 	}
 
+	async removeIndexByUri(uri: Uri): Promise<void> {
+		const fileName = StimulusController.parseFileName(uri);
+		const controllerName = StimulusController.parseName(fileName);
+
+		delete this.index[controllerName];
+	}
+
 	get(controllerName: string): StimulusController | undefined {
 		return this.index[controllerName];
 	}
@@ -40,9 +47,7 @@ export class Stimulus {
 		return this.get(controllerName)?.methodNames || [];
 	}
 
-	private updateIndex(controller: StimulusController): Index {
+	private updateIndex(controller: StimulusController): void {
 		this.index[controller.name] = controller;
-
-		return this.index;
 	}
 }
