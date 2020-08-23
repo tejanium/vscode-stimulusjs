@@ -4,7 +4,7 @@
 	"displayName": "StimulusJS",
 	"description": "StimulusJS support for VS Code",
 	"icon": "img/ico.png",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"homepage": "https://github.com/tejanium/vscode-stimulusjs/blob/master/README.md",
 	"bugs": {
 		"url": "https://github.com/tejanium/vscode-stimulusjs/issues"
@@ -15,7 +15,7 @@
 		"url": "https://github.com/tejanium/vscode-stimulusjs"
 	},
 	"engines": {
-		"vscode": "^1.47.0"
+		"vscode": "^1.48.0"
 	},
 	"categories": [
 		"Other"
@@ -55,8 +55,8 @@
 		"webpack-cli": "^3.3.12"
 	},
 	"dependencies": {
-		"acorn": "^8.0.1",
+		"acorn": "^7.4.0",
 		"acorn-bfs": "^0.2.0",
-		"acorn-stage3": "^4.0.0"
+		"acorn-stage3": "^3.0.0"
 	}
 }

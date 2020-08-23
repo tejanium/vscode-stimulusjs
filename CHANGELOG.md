@@ -1,3 +1,9 @@
+## [1.0.2]
+
+### Fixed
+
+- Should update index on file rename
+
 ## [1.0.1]
 
 ### Fixed
