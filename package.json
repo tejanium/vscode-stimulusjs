@@ -55,7 +55,7 @@
 		"webpack-cli": "^3.3.12"
 	},
 	"dependencies": {
-		"acorn": "^7.4.0",
+		"acorn": "^7.4.1",
 		"acorn-bfs": "^0.2.0",
 		"acorn-stage3": "^3.0.0"
 	}
