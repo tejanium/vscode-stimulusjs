@@ -17,9 +17,15 @@ export class JavascriptParser {
   readonly nodes: JsNode[];
 
   constructor(text: string) {
-    const ast = ExtendedParser.parse(text, { sourceType: 'module', locations: true });
+    try {
+      const ast = ExtendedParser.parse(text, { sourceType: 'module', locations: true });
 
-    this.nodes = <JsNode[]>bfs(ast);
+      this.nodes = <JsNode[]>bfs(ast);
+    } catch (error) {
+      this.nodes = [];
+      console.error(error);
+      console.error(text);
+    }
   }
 
   getElements(node: JsNode): JsNode[] {
