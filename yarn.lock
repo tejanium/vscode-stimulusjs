@@ -478,10 +478,10 @@ astral-regex@^1.0.0:
   resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-1.0.0.tgz#6c8c3fb827dd43ee3918f27b82782ab7658a6fd9"
   integrity sha512-+Ryf6g3BKoRc7jfp7ad8tM4TtMiaWvbF/1/sQcZPkkS7ag3D5nMBCe2UfOTONtAkaG0tO0ij3C5Lwmf1EiyjHg==
 
-azure-devops-node-api@^10.2.2:
-  version "10.2.2"
-  resolved "https://registry.yarnpkg.com/azure-devops-node-api/-/azure-devops-node-api-10.2.2.tgz#9f557e622dd07bbaa9bd5e7e84e17c761e2151b2"
-  integrity sha512-4TVv2X7oNStT0vLaEfExmy3J4/CzfuXolEcQl/BRUmvGySqKStTG2O55/hUQ0kM7UJlZBLgniM0SBq4d/WkKow==
+azure-devops-node-api@^11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/azure-devops-node-api/-/azure-devops-node-api-11.0.1.tgz#b7ec4783230e1de8fc972b23effe7ed2ebac17ff"
+  integrity sha512-YMdjAw9l5p/6leiyIloxj3k7VIvYThKjvqgiQn88r3nhT93ENwsoDS3A83CyJ4uTWzCZ5f5jCi6c27rTU5Pz+A==
   dependencies:
     tunnel "0.0.6"
     typed-rest-client "^1.8.4"
@@ -2457,12 +2457,12 @@ v8-compile-cache@^2.0.3, v8-compile-cache@^2.2.0:
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.2.0.tgz#9471efa3ef9128d2f7c6a7ca39c4dd6b5055b132"
   integrity sha512-gTpR5XQNKFwOd4clxfnhaqvfqMpqEwr4tOtCyz4MtYZX2JYhfr1JvBFKdS+7K/9rfpZR3VLX+YWBbKoxCgS43Q==
 
-vsce@^1.95.0:
-  version "1.95.0"
-  resolved "https://registry.yarnpkg.com/vsce/-/vsce-1.95.0.tgz#852a5f9c9c6c03c42e8096ffdb032a07260369ed"
-  integrity sha512-OiSrJRd9NT4t+MBVrTblHqo0pOGaoplHzEzSNOGnIsLxyRIqk4CYmoqUnjOrZf8DEalbALsFVTFbTJLeC1hAKA==
+vsce@^1.95.1:
+  version "1.95.1"
+  resolved "https://registry.yarnpkg.com/vsce/-/vsce-1.95.1.tgz#95b465c3188508eabc8af72f3e20b632dd71c0da"
+  integrity sha512-2v8g3ZtZkaOTscRjjCAtM3Au6YYWJtg9UNt1iyyWko7ZHejbt5raClcNzQ7/WYVLYhYHc+otHQifV0gCBREgNg==
   dependencies:
-    azure-devops-node-api "^10.2.2"
+    azure-devops-node-api "^11.0.1"
     chalk "^2.4.2"
     cheerio "^1.0.0-rc.9"
     commander "^6.1.0"
