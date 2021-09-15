@@ -22,7 +22,8 @@
 	],
 	"activationEvents": [
 		"onLanguage:html",
-		"onLanguage:erb"
+		"onLanguage:erb",
+		"onLanguage:twig"
 	],
 	"main": "./dist/extension",
 	"contributes": {},
