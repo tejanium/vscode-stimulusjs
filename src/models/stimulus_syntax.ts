@@ -19,7 +19,7 @@ export class StimulusSyntax {
 	constructor(readonly rawSyntax: string) {
 		const match = rawSyntax.match(SYNTAX_REGEXP) || [];
 		const key = match[1];
-		const values = match[2].split(' ');
+		const values = match[2].split(' ').filter(v => !v.startsWith('_'));
 
 		this.type = key;
 		this.properties = values.map(rawValue => this.parseValue(rawValue));

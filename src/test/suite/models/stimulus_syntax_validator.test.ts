@@ -114,6 +114,34 @@ suite('Syntax validator for diagnostic', () => {
 
 		assert.deepStrictEqual(offenses, []);
 	});
+
+	test(`return no offenses for target _blank`, async () => {
+		const text = `<a target="_blank">`;
+		const offenses = await validateContent(text);
+
+		assert.deepStrictEqual(offenses, []);
+	});
+
+	test(`return no offenses for target _top`, async () => {
+		const text = `<a target="_top">`;
+		const offenses = await validateContent(text);
+
+		assert.deepStrictEqual(offenses, []);
+	});
+
+	test(`return no offenses for target _parent`, async () => {
+		const text = `<a target="_parent">`;
+		const offenses = await validateContent(text);
+
+		assert.deepStrictEqual(offenses, []);
+	});
+
+	test(`return no offenses for target _self`, async () => {
+		const text = `<a target="_self">`;
+		const offenses = await validateContent(text);
+
+		assert.deepStrictEqual(offenses, []);
+	});
 });
 
 suite('Ruby method syntax validator sanity check', () => {
