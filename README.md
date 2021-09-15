@@ -1,3 +1,10 @@
+# NOTICE
+
+**This extension only supports the Stimulus v1 old syntax and NOT the new syntax introduced in v2**
+
+https://github.com/tejanium/vscode-stimulusjs/issues/103
+https://github.com/hotwired/stimulus/issues/342#issuecomment-816184627
+
 # VSCode Stimulus JS
 
 [![Build Status](https://dev.azure.com/tejanium/vscode-stimulusjs/_apis/build/status/tejanium.vscode-stimulusjs?branchName=master)](https://dev.azure.com/tejanium/vscode-stimulusjs/_build/latest?definitionId=3&branchName=master)
